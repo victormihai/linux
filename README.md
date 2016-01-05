@@ -1,2 +1,1 @@
-# linux
-Bash Scripts
+# So you did read me !
