@@ -1,0 +1,33 @@
+#!/bin/bash
+#Sending an email using bash.
+#INSTALLING:
+#sudo apt-get install sendEmail libio-socket-ssl-perl libnet-ssleay-perl
+#SENDING:
+#sendEmail -f from@adress -t to@adress -u subject -m body -a attachment(s) -cc CC -s mailserver:port -xu user_acc -xp passwd -o tls=yes (optional) -v (optional)
+
+#The Script:
+
+read -p "Username:" user
+echo "------------"
+read -p "Password:" password
+echo "------------"
+#The From field should be the same as the Username to which you add @mail_youre_using.com
+# Example: username@gmail.com
+
+read -p "From:" from
+echo "------------"	
+read -p "To:" to
+echo "------------"
+read -p "Subject:" subject
+echo "------------"
+read -p "Body:" body 
+echo "------------"
+#Specify location of atachment
+#Example /home/mypc/Desktop assuming mypc=$(whoami)
+
+read -p "Attachment:"attachment
+#Server example: smtp.googlemail.com:587
+
+read -p "Mail Server and Port:" server
+echo "------------"
+sendEmail -f $from -t $to -u $subject -m $body -a attachment -s $server -xu $user -xp $password -o tls=yes	
