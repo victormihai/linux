@@ -7,10 +7,10 @@
 
 #The Script:
 
-read -s -p "Username:" user
-echo
+read -p "Username:" user
 echo "------------"
-read -p "Password:" password
+read -s -p "Password:" password
+echo
 echo "------------"
 #The From field should be the same as the Username to which you add @mail_youre_using.com
 # Example: username@gmail.com
