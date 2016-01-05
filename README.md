@@ -1,1 +1,1 @@
-# So you did read me !
+# Starting out with simple bash scripts.
