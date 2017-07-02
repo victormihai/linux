@@ -1,0 +1,53 @@
+#SystemUpdate v1.0 
+#Created @ 04-01-2016
+#supdt is a script to update your packages.
+#It also performs upgrade and clean operations.
+#User must be root to perform successful update.
+#By: Demetrescu Victor
+#Contact: victor.demetrescu@gmail.com
+#supdt - for lazy users :D
+
+#!/bin/bash
+clear
+echo -e "\e[92m		
+                                                                                                
+                                                                  dddddddd                      
+                                                                  d::::::d        tttt          
+                                                                  d::::::d     ttt:::t          
+                                                                  d::::::d     t:::::t          
+                                                                  d:::::d      t:::::t          
+    ssssssssss   uuuuuu    uuuuuu ppppp   ppppppppp       ddddddddd:::::dttttttt:::::ttttttt    
+  ss::::::::::s  u::::u    u::::u p::::ppp:::::::::p    dd::::::::::::::dt:::::::::::::::::t    
+ss:::::::::::::s u::::u    u::::u p:::::::::::::::::p  d::::::::::::::::dt:::::::::::::::::t    
+s::::::ssss:::::su::::u    u::::u pp::::::ppppp::::::pd:::::::ddddd:::::dtttttt:::::::tttttt    
+ s:::::s  ssssss u::::u    u::::u  p:::::p     p:::::pd::::::d    d:::::d      t:::::t          
+   s::::::s      u::::u    u::::u  p:::::p     p:::::pd:::::d     d:::::d      t:::::t          
+      s::::::s   u::::u    u::::u  p:::::p     p:::::pd:::::d     d:::::d      t:::::t          
+ssssss   s:::::s u:::::uuuu:::::u  p:::::p    p::::::pd:::::d     d:::::d      t:::::t    tttttt
+s:::::ssss::::::su:::::::::::::::uup:::::ppppp:::::::pd::::::ddddd::::::dd     t::::::tttt:::::t
+s::::::::::::::s  u:::::::::::::::up::::::::::::::::p  d:::::::::::::::::d     tt::::::::::::::t
+ s:::::::::::ss    uu::::::::uu:::up::::::::::::::pp    d:::::::::ddd::::d       tt:::::::::::tt
+  sssssssssss        uuuuuuuu  uuuup::::::pppppppp       ddddddddd   ddddd         ttttttttttt  
+                                   p:::::p                                                      
+                                   p:::::p                                                      
+                                  p:::::::p                                                     
+                                  p:::::::p                                                     
+                                  p:::::::p                                                     
+                                  ppppppppp                                                     
+                                                                                                
+
+"
+sleep 1
+echo -e "\e[0mUpdate commencing...Do not disconnect from the Internet."
+sudo apt-get update
+sleep 0.5
+echo -e "\e[92mUpdate complete. Commencing Upgrade"
+echo -e "\e[0m"
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get autoclean -y
+sudo apt-get autoremove -y
+sleep 0.5
+echo -e "\e[92mUpdate & Upgrade successful. Program terminated."
+echo -e "\e[0m"
+2>/dev/null
