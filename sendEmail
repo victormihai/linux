@@ -1,9 +1,25 @@
-#!/bin/bash
-#Sending an email using bash.
+#Created @ 05-01-2016
+#Sending an email using bash
+#By: Demetrescu Victor
+#Contact: victor.demetrescu@gmail.com.
 #INSTALLING:
 #sudo apt-get install sendEmail libio-socket-ssl-perl libnet-ssleay-perl
 #SENDING:
 #sendEmail -f from@adress -t to@adress -u subject -m body -a attachment(s) -cc CC -s mailserver:port -xu user_acc -xp passwd -o tls=yes (optional) -v (optional)
+#SystemUpdate v1.0 
+
+#!/bin/bash
+clear
+echo "
+                    _ _____                _ _ 
+                   | |  ___|              (_) |
+ ___  ___ _ __   __| | |__ _ __ ___   __ _ _| |
+/ __|/ _ \ '_ \ / _` |  __| '_ ` _ \ / _` | | |
+\__ \  __/ | | | (_| | |__| | | | | | (_| | | |
+|___/\___|_| |_|\__,_\____/_| |_| |_|\__,_|_|_|
+                                               
+                                               
+"
 
 #The Script:
 
